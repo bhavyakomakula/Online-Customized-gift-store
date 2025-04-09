@@ -168,36 +168,41 @@ p a:hover {
         </form>
     </div>
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".signup-form");
-
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent form submission for validation
-
-        const username = document.getElementById("username").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value.trim();
-
-        if (username === "" || email === "" || password === "") {
-            alert("Please fill in all fields");
-            return;
-        }
-
-        if (!validateEmail(email)) {
-            alert("Please enter a valid email address");
-            return;
-        }
-
-        // Simulating Signup Success and Redirecting to Login Page
-        alert("Signup Successful! Redirecting to login page...");
-        window.location.href = "login.html"; // Ensure login.html exists in the same folder
-    });
-
-    function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
-});
-    </script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector(".signup-form");
+        
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent form submission for validation
+        
+                const username = document.getElementById("username").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const password = document.getElementById("password").value.trim();
+        
+                if (username === "" || email === "" || password === "") {
+                    alert("Please fill in all fields");
+                    return;
+                }
+        
+                if (!validateEmail(email)) {
+                    alert("Please enter a valid email address");
+                    return;
+                }
+        
+                // ✅ Save signup data to localStorage
+                localStorage.setItem("signupUsername", username);
+                localStorage.setItem("signupEmail", email);
+                localStorage.setItem("signupPassword", password);
+        
+                alert("Signup Successful! Redirecting to login page...");
+                window.location.href = "login.html"; // Redirect to login page
+            });
+        
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+        });
+        </script>
+        
 </body>
 </html>
