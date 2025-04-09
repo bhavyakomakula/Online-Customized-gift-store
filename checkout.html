@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=".css">
+    <style>
+        /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general container styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Checkout container */
+#checkout-container {
+    background-color: rgba(255, 255, 255, 0.8);  /* Transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.088);
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+}
+
+/* Header */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Label styles */
+label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Input field styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Focus effect for input fields */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Checkout button */
+#checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff99007f;  /* Button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+#checkout-btn:hover {
+    background-color: #ff8800;
+}
+
+/* A tag style */
+a {
+    text-decoration: none;
+}
+
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- Checkout Page HTML -->
+<div id="checkout-container">
+    <h2>Address Details</h2>
+    
+    <!-- Customer Details Form -->
+    <form id="customer-details-form">
+        <div class="form-group">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">PinCode:</label>
+            <input type="number" id="PinCode" placeholder="Enter your PinCode" required>
+            <label for="address">City:</label>
+            <input type="text" id="City" placeholder="Enter your City Name" required>
+            <label for="address">District:</label>
+            <input type="text" id="District" placeholder="Enter your District Name" required>
+            <label for="address">State:</label>
+            <input type="text" id="State" placeholder="Enter your State Name" required>
+            <label for="address">Road Name/Area Name:</label>
+            <input type="text" id="District" placeholder="Enter your Street Name" required>
+
+        </div>
+    </form>
+
+    <!-- Checkout Button -->
+    <a href="payment.html">
+
+    <button id="checkout-btn">Save Address and Continue</button>
+    
+    </a>
+</div>
+</body>
+</html>

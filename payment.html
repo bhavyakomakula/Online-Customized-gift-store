@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods</title>
+    <style>
+       body {
+            font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(to right, #ffffff, #00ccff);
+            color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            margin: 0;
+            text-decoration: none;
+            width: 100%;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Fade-out effect */
+        .fade-out {
+            opacity: 0;
+        }
+
+        /* Payment Methods Wrapper */
+        #payment-methods {
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 30px;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 700px;
+        }
+
+        /* Payment Option Buttons */
+        .payment-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 90%;
+            max-width: 700px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            text-align: center;
+        }
+
+        /* Hover and Selected State */
+        .payment-button:hover,
+        .payment-button.selected {
+            background-color: #007bff;
+            border-color: #0056b3;
+            color: white;
+            border-radius: 20px;
+        }
+
+        /* Payment Icon */
+        .payment-icon {
+            width: 60px;
+            height: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            #payment-methods {
+                width: 95%;
+                padding: 20px;
+            }
+            .payment-button {
+                font-size: 18px;
+                padding: 15px;
+                width: 100%;
+            }
+            .payment-icon {
+                width: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Select Payment Method</h2>
+    <div id="payment-methods">
+        <button class="payment-button" onclick="selectPayment(this)">
+            <img src="cc.jpeg" alt="Credit Card" class="payment-icon">
+            <span>Credit Card</span>
+        </button>
+        <button class="payment-button" onclick="selectPayment(this)">
+            <img src="dc.jpeg" alt="Debit Card" class="payment-icon">
+            <span>Debit Card</span>
+        </button>
+        <button class="payment-button" onclick="selectPayment(this)">
+            <img src="pp.png" alt="PhonePe" class="payment-icon">
+            <span>PhonePe</span>
+        </button>
+        <button class="payment-button" onclick="selectPayment(this)">
+            <img src="gp.jpeg" alt="Google Pay" class="payment-icon">
+            <span>Google Pay</span>
+        </button>
+        <button class="payment-button" onclick="selectPayment(this)">
+            <img src="pt.png" alt="Paytm" class="payment-icon">
+            <span>Paytm</span>
+        </button>
+    </div>
+    
+    <script>
+        function selectPayment(button) {
+            document.querySelectorAll('.payment-button').forEach(btn => btn.classList.remove('selected'));
+            button.classList.add('selected');
+            
+            // Add fade-out effect
+            document.body.classList.add('fade-out');
+            
+            setTimeout(() => {
+                window.location.href = 'final.html';
+            }, 500);
+        }
+    </script>
+</body>
+</html>

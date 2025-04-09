@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Product</title>
+    <script defer src="custom.js"></script> <!-- Linking JS -->
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+
+    <div id="customization-container">
+        <h2>Customized Product</h2>
+        
+        <!-- Product Preview Area -->
+        <div id="preview-container">
+            <img id="product-image" src="Cup.jpeg" alt="Product Preview">
+            <div id="text-preview">Your Text</div>
+            <img id="image-preview" src="" alt="Image Preview" style="display: none;">
+        </div>
+
+        <!-- Customization Options -->
+        <label for="custom-text">Enter Text:</label>
+        <input type="text" id="custom-text" placeholder="Type your text here">
+
+        <h1>OR</h1>
+
+        <label for="upload-image" class="upload-btn">Upload an Image</label>
+        <input type="file" id="upload-image" accept="image/*">
+        <input type="text" id="customText" placeholder="Enter custom text">
+        <input type="color" id="colorPicker">
+        <label><input type="radio" name="wrap" value="Yes"> Gift Wrap</label>
+        <label><input type="radio" name="wrap" value="No"> No Wrap</label>
+        <button id="add-to-cart">Add to Cart</button>
+        
+    </div>
+<script src="custom.js"></script>
+</body>
+</html>

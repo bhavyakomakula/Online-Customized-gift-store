@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Futuristic Gradient Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+}
+
+/* Glassmorphism Container */
+.container {
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 380px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading with Glow Effect */
+h2 {
+    color: #fff;
+    font-size: 28px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+/* Input Fields Container */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.input-group label {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+/* Input Fields */
+.input-group input {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Input Placeholder */
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Input Focus Effect */
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid #00d4ff;
+    box-shadow: 0px 0px 10px #00d4ff;
+    transform: scale(1.02);
+}
+
+/* Neon Glow Login Button */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #00d4ff, #8000ff);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    box-shadow: 0px 0px 15px rgba(0, 212, 255, 0.6);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #8000ff, #00d4ff);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px rgba(0, 212, 255, 0.8);
+}
+
+/* Sign Up Link */
+p {
+    color: #fff;
+    margin-top: 15px;
+}
+
+p a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+p a:hover {
+    text-decoration: underline;
+    color: #ffea00;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    </style>
+    <link rel="stylesheet" href="index.html">
+</head>
+<body>
+    <div class="container">
+        <form class="login-form">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit",href="index.html">Login</button>
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </form>
+    </div>
+    <script>
+     document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".login-form");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        if (email === "" || password === "") {
+            alert("Please enter both email and password.");
+            return;
+        }
+
+        // Retrieve stored data (for demo purposes, actual implementation requires backend authentication)
+        const storedEmail = localStorage.getItem("userEmail");
+        const storedPassword = localStorage.getItem("userPassword");
+
+            window.location.href = "index.html"; // Redirect to homepage
+         
+    });
+});
+    </script>
+</body>
+</html>

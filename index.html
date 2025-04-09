@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Gift Store</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <span id="user-name" class="user-name"></span>
+            <input type="text" placeholder="Search for gifts...">
+            <a href="cart.html" class="cart-icon">🛒</a>
+            <a href="signup.html" class="profile-icon">👤</a>
+            <a href="login.html"></a>
+
+        </div>
+        <h1>Customized Gift Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Catalog</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="index.html">Support</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h2>Personalized Gifts for Every Occasion</h2>
+        <p>Customize mugs, t-shirts, and more with your favorite designs!</p>
+        <a href="catalog.html" class="cta-button">Start Customizing</a>
+    </section>
+    
+    <section class="gift-categories">
+        <h2 class="mm">Explore Gift Categories</h2>
+        <div class="categories">
+            <div class="category"><a href="#">🎁 Birthday Gifts</a></div>
+            <div class="category"><a href="#">❤️ Anniversary Gifts</a></div>
+            <div class="category"><a href="#">🎓 Graduation Gifts</a></div>
+            <div class="category"><a href="#">💼 Corporate Gifts</a></div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-list">
+            <div class="product" data-id="1">
+                <img src="Cup.jpeg" alt="Customized Coffee Cup">
+                <p>Customized Coffee Cup</p>
+                <p>Price: $10.00</p>
+                <h4>Go to Customization</h4>
+            </div>
+            <div class="product" data-id="2">
+                <img src="Tshirt.jpeg" alt="Customized T-Shirt">
+                <p>Customized T-Shirt</p>
+                <p>Price: $15.00</p>
+                <h4>Go to Customization</h4>
+
+            </div>
+            <div class="product" data-id="3">
+                <img src="Frame.jpeg" alt="Customized Photo Frame">
+                <p>Customized Photo Frame</p>
+                <p>Price: $20.00</p>
+                <h4>Go to Customization</h4>
+
+            </div>
+            <div class="product" data-id="4">
+                <img src="Keychain.jpeg" alt="Customized Keychain">
+                <p>Customized Keychain</p>
+                <p>Price: $8.00</p>
+                <h4>Go to Customization</h4>
+
+            </div>
+            <div class="product" data-id="5">
+                <img src="Art.jpeg" alt="Customized Art">
+                <p>Customized Art</p>
+                <p>Price: $25.00</p>
+                <h4>Go to Customization</h4>
+
+            </div>
+            <div class="product" data-id="6">
+                <img src="Calender.jpeg" alt="Customized Calendar">
+                <p>Customized Calendar</p>
+                <p>Price: $12.00</p>
+                <h4>Go to Customization</h4>
+
+            </div>
+            <div class="product" data-id="7">
+                <img src="Pillow.jpeg" alt="Customized Pillow">
+                <p>Customized Pillow</p>
+                <p>Price: $18.00</p>
+                <h4>Go to Customization</h4>
+
+            </div>
+            <div class="product" data-id="8">
+                <img src="Lamp.jpeg" alt="Customized Lamp">
+                <p>Customized Lamp</p>
+                <p>Price: $22.00</p>
+                <h4>Go to Customization</h4>
+
+            </div>
+        </div>
+    </section>
+    
+    
+    <script src="main.js"></script> 
+    
+
+    <section class="trending-gifts">
+        <h2 id="h2">Trending Gifts</h2>
+        <p>Check out our best-selling and most popular gifts!</p>
+        <a href="catalog.html" class="cta-button">Shop Now</a>
+    </section>
+    
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+        <span id="cart-close" class="cart-close">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button id="checkout-btn">Checkout</button>
+    </div>
+</div>
+    <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for exclusive offers and new products.</p>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+    </section>
+    
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@customgiftstore.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Follow us: 
+            <a href="#">📘 Facebook</a> | 
+            <a href="#">📸 Instagram</a> | 
+            <a href="#">🐦 Twitter</a>
+        </p>
+    </section>
+    <!-- Cart Modal -->
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+        <span class="close-btn">&times;</span>
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+    </div>
+</div>
+    <footer>
+        <p>2025 Custom Gift Store. All rights reserved.</p>
+    </footer>
+    <script src="project.js"></script>
+</body>
+</html>
